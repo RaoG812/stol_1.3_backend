@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login via Telegram</title>
+    <title>Login with Telegram</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
-        .container {
-            background-color: #fff;
-            padding: 2rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        .login-container {
             text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            margin-bottom: 1rem;
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
             color: #333;
-        }
-        .telegram-widget {
-            margin-top: 1rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Login via Telegram</h1>
-        <p>Click the button below to log in with your Telegram account.</p>
-        <div class="telegram-widget">
-            <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="stol_food_bot" data-size="small" data-auth-url="https://stol.onlineweb.shop/" data-request-access="write"></script>
-        </div>
+    <div class="login-container">
+        <h1>Login with Telegram</h1>
+        <script async src="https://telegram.org/js/telegram-widget.js?22" 
+                data-telegram-login="stol_food_bot" 
+                data-size="large" 
+                data-auth-url="https://stol.onlineweb.shop/" 
+                data-request-access="write">
+        </script>
     </div>
 </body>
 </html>
