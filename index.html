@@ -3,35 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login with Telegram</title>
+    <title>Intermediary Page</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        body, html {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
         }
-        .login-container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        .top-banner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: white; /* Change this color to match the background of your iframe content */
+            z-index: 10;
         }
-        .login-container h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
+        .iframe-container {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 50px);
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login with Telegram</h1>
-       <<script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="samplebot" data-size="large" data-auth-url="https://stol.onlineweb.shop/" data-request-access="write"></script>
+    <div class="top-banner"></div>
+    <div class="iframe-container">
+        <iframe src="https://stol.onlineweb.shop/" title="Content Frame"></iframe>
     </div>
 </body>
 </html>
